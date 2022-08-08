@@ -7,30 +7,32 @@
  fn main() {
      //User input variable
      let mut user_in = String::new();
-     
+     let mut user_2 = String::new(); 
      println!("Enter you name: ");
      stdin().read_line(&mut user_in).expect("Use the alphabet only jerk!!...Mission failed");
  
      println!("Hello {}",user_in);
 
      println!("Enter a number between 1 - 5: "); 
-     stdin().read_line(&mut user_in.flush()).expect("Failure to input a character jerk!!...Mission failed"); 
+     stdin().read_line(&mut user_2).expect("Failure to input a character jerk!!...Mission failed"); 
      
-     println!("Your String selection: {}",us_2);
      //convert the string into an int
-     //let numb_in = user_in as u16;
+     let numb_in = user_2.trim();
+    match numb_in.parse::<u32>(){
+        Ok(i) => println!("Your entry: {}", i),
+        Err(..) => println!("This in not what I asked {}", numb_in),
 
-     //println!("Your int selection is: {}",numb_in);
-
-     /*
-      match numb_in{
-        1 => println!("One for the money!"),
-        2 => println!("Two for the show!"),
-        3 => println!("Three to get ready!"),
-        4 => println!("Four...Lets GO!"),
-        5 => println!("Five just staying alive!"),
-        _=> println!("Pick a number between 1 and 5 moron!"),
-
-     }*/
+    };
+    //This is a silly loop. There has a be a better way with match (switch/case)t      
+    let conv = numb_in.parse::<u32>();
+    
+        //if (conv >= Ok(6)) || (conv <= Ok(0))  {println!("You are a moron."); }
+        if conv == Ok(1) {println!("One for the msney!");  }
+        if conv == Ok(2) {println!("Two for the show!!"); }
+        if conv == Ok(3) {println!("Three to get ready!!!"); }
+        if conv == Ok(4) {println!("Four...Lets GO!!!!"); }
+        if conv == Ok(5) {println!("Stayin alive until five!!!!!"); }
+        
         
  }
+
