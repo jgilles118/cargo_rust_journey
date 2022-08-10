@@ -14,7 +14,7 @@ fn main() {
     println!("Welcome Rustling!!\nEnter your name: ");
     stdin().read_line(&mut name).expect("YOUR NAME!!");
 
-    //Display the user name then accept a numerical value.
+    //Display the user name then accept a string to be converted into a numerical value.
     println!("Welcome to Rust Land {}!!\nPlease pick a number between 1 - 4: ", name);
     stdin().read_line(&mut numb).expect("A NUMBER MORON!!");
 
