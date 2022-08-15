@@ -15,14 +15,14 @@ fn main() {
     stdin().read_line(&mut name).expect("YOUR NAME!!");
 
     //Display the user name then accept a string to be converted into a numerical value.
-    println!("Welcome to Rust Land {}!!\nPlease pick a number between 1 - 4: ", name);
+    println!("Welcome to Rust Land {}\nPlease pick a number between 1 - 4: ", name);
     stdin().read_line(&mut numb).expect("A NUMBER MORON!!");
 
     //Convert the String to an integer.
-    let converted = numb.trim().parse::<u32>();
+    let numb = numb.trim().parse::<u32>();
 
     //Match statement display
-    match converted {
+    match numb {
 
         Ok(1) => println!("One for the money!"),
         Ok(2) => println!("Two for the show!!"),
