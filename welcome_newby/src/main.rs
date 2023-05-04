@@ -11,7 +11,7 @@ fn main() {
     let mut name = String::new();
     let mut numb = String::new();
 
-    println!("Welcome Rustling!!\nEnter your name: ");
+    println!("Welcome Rustling!!\nEnter your name:");
     stdin().read_line(&mut name).expect("YOUR NAME!!");
 
     //Display the user name then accept a string to be converted into a numerical value.
@@ -30,7 +30,5 @@ fn main() {
         Ok(4) => println!("Four...Lets GO!!!"),
         _ => println!("You FOOL, between 1 and 4 "),
     }
-
-
 
 }
